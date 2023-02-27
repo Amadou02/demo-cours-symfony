@@ -24,14 +24,14 @@ RUN a2dissite 000-default.conf \
 # Copie des fichiers de l'application Symfony
 WORKDIR /var/www
 
-COPY . .
+# COPY . .
 
-RUN composer install \
-    && composer dump-autoload
+# RUN composer install \
+#     && composer dump-autoload
 
 # Création des fichiers de cache et définition des permissions
-RUN chown -R www-data:www-data /var/www/var \
-    && chmod -R 777 /var/www/var
+# RUN chown -R www-data:www-data /var/www/var \
+#     && chmod -R 777 /var/www/var
 
 # Exposition du port 80 pour Apache
 EXPOSE 80

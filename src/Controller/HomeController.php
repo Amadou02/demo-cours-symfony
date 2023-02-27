@@ -22,10 +22,7 @@ class HomeController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            // var_dump($product);
-            # code...
-            $productRepository->save($product);
-
+            $productRepository->save($product, true);
         }
         return $this->render('home/index.html.twig', [
             'form' => $form,

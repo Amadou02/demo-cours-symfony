@@ -17,3 +17,7 @@ package.json
 # docker-compose.yml
 # Dockerfile
 webpack.config.js
+
+###> liip/imagine-bundle ###
+/public/media/cache/
+###< liip/imagine-bundle ###

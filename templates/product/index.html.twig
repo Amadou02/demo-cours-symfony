@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProductController!
+{% endblock %}
+
+{% block body %}
+
+	<div class="example-wrapper">
+		<h1>Mes produits</h1>
+		<div class="grid">
+			{% for product in products %}
+				<article>
+					<header>
+						<h2>
+							{{ product.name }}
+						</h2>
+					</header>
+					<img src="{{ vich_uploader_asset(product) }}" alt="{{ product.name }}">
+				</article>
+			{% endfor %}
+		</div>
+
+	</div>
+{% endblock %}

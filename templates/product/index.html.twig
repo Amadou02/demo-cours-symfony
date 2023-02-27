@@ -15,7 +15,8 @@
 							{{ product.name }}
 						</h2>
 					</header>
-					<img src="{{ vich_uploader_asset(product) }}" alt="{{ product.name }}">
+					<img src="{{ vich_uploader_asset(product) | imagine_filter('thumbnail') }}" alt="{{ product.name }}">
+
 				</article>
 			{% endfor %}
 		</div>
